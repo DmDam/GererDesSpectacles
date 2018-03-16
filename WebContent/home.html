@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Accueil</title>
+</head>
+<body>
+	<form method="post" action="TrouverSpectacleServlet">
+		<fieldset>
+			<legend>Rechercher un spectacle</legend>
+                
+                <label for="nom">Ville</label>
+                <select name="ville">
+                <option value="">bdd en attente</option>
+                </select>
+                <br />
+                
+                <br />
+                <label for="nom">Date</label>
+				<input type="date" id="date" name="date">
+                <br />
+                
+                <br />
+                <label for="nom">Spectacle</label>
+                <select name="spectacle">
+                <option value="">bdd en attente</option>
+                </select>
+                <br />
+                
+                <br />
+                <input type="submit" value="Rechercher" class="sansLabel" />
+                <br />
+
+		</fieldset>
+	</form>
+	
+	<br />
+	<a href="index.html">Retour</a>
+	<br />
+	
+</body>
+</html>

@@ -53,7 +53,7 @@ public class SpectacleBDD {
 		return rset;
 	}
 
-	protected void connexion() {
+	public void connexion() {
 		try {
 			DriverManager.registerDriver(new com.mysql.jdbc.Driver());
 			this.db = DriverManager.getConnection("jdbc:mysql://localhost/Spectacle?user=admin&password=network");
@@ -66,7 +66,7 @@ public class SpectacleBDD {
 		}
 	}
 
-	protected void createStatement() {
+	public void createStatement() {
 		try {
 			this.stnt = getDb().createStatement();
 			System.out.println("Statement created ...");
@@ -75,7 +75,7 @@ public class SpectacleBDD {
 		}
 	}
 
-	protected void fermetureStatement() {
+	public void fermetureStatement() {
 		try {
 			getStnt().close();
 			System.out.println("Fermeture statement ...");
@@ -84,7 +84,7 @@ public class SpectacleBDD {
 		}
 	}
 
-	protected void fermetureConnexion() {
+	public void fermetureConnexion() {
 		try {
 			getDb().close();
 			System.out.println("Connexion close");

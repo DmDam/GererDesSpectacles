@@ -14,6 +14,7 @@ public class SpectacleBDD {
 	protected String titreSpectacleSQL = "SELECT titreSpectacle FROM Spectacles";
 
 	public SpectacleBDD() {
+		
 		/*Exemple de connexion et de requete
 		this.connexion();
 		this.createStatement();

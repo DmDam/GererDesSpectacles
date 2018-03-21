@@ -6,6 +6,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import javax.servlet.RequestDispatcher;
 
 /**
  * Servlet implementation class TrouverSpectacleServlet
@@ -25,7 +27,17 @@ public class TrouverSpectacleServlet extends HttpServlet {
 	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+
+		String ville = request.getParameter("ville");
+		String nom = request.getParameter("nom");
+		
+		String spectacle ="requête bdd";
+		
+		HttpSession session = request.getSession();
+		session.setAttribute("spectacle",spectacle);
+		RequestDispatcher disp = request.getRequestDispatcher("reservation.jsp");
+		disp.forward(request, response);
+
 	}
 
 }

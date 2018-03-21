@@ -14,7 +14,24 @@ public class SpectacleBDD {
 	protected String titreSpectacleSQL = "SELECT titreSpectacle FROM Spectacles";
 
 	public SpectacleBDD() {
-
+		/*Exemple de connexion et de requete
+		this.connexion();
+		this.createStatement();
+		
+		try {
+			getStnt().executeQuery("SELECT titreSpectacle FROM Spectacles");
+			
+			while(getRset().next()) {
+				System.out.println(getRset().getString("titreSpectacle"));
+				System.out.println("----------");
+			}			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+				
+		this.fermetureStatement();
+		this.fermetureConnexion();
+		*/
 	}
 
 	public Connection getDb() {

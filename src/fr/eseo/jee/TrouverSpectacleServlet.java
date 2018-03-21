@@ -30,6 +30,7 @@ public class TrouverSpectacleServlet extends HttpServlet {
 
 		String ville = request.getParameter("ville");
 		String nom = request.getParameter("nom");
+		String type = request.getParameter("type");
 		
 		String spectacle ="requête bdd";
 		

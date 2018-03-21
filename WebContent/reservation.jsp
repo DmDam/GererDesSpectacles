@@ -16,7 +16,7 @@
 			<legend>Réserver un spectacle</legend>
 			
 			    <br />
-                <label for="nom">Spectacle</label>
+                <label for="nom">Résultat de votre recherche :</label>
                 <select name="spectacle">
                 <option value="">bdd en attente</option>
                 </select>

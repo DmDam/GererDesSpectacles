@@ -33,15 +33,13 @@ public class TrouverSpectacleServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		String ville = request.getParameter("ville");
-		String nom = request.getParameter("nom");
-		String type = request.getParameter("type");
 
 		SpectacleBDD instanceBDD = new SpectacleBDD();
 		instanceBDD.connexion();
 		instanceBDD.createStatement();
 
 		try {
-			instanceBDD.getStnt().executeQuery("SELECT titreSpectacle FROM Spectacles");
+			instanceBDD.getStnt().executeQuery("SELECT titreSpectacle FROM Spectacles WHERE ville='"+ville+"';");
 
 			while (instanceBDD.getRset().next()) {
 				System.out.println(instanceBDD.getRset().getString("titreSpectacle"));

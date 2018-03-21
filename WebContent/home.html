@@ -17,13 +17,33 @@
 				<form method="post" action="TrouverSpectacleServlet">
 					<fieldset>
 						<legend>Rechercher un spectacle</legend>
-
-						<br /> <label for="nom">Ville</label> <select name="ville">
-							<option value="">bdd en attente</option>
-						</select> <br /> <br /> <label for="nom">Date</label> <input type="date"
-							id="date" name="date"> <br /> <br /> <label for="nom">Type</label>
-						<input type="date" id="date" name="date"> <br /> <br />
-						<input type="submit" value="Rechercher" class="sansLabel" /> <br />
+						<br />
+						<label for="nom">Ville</label>
+						<select name="ville">
+							<option value="Angers">Angers</option>
+							<option value="Bordeaux">Bordeaux</option>
+							<option value="Lille">Lille</option>
+							<option value="Lyon">Lyon</option>
+							<option value="Marseille">Marseille</option>
+							<option value="Nantes">Nantes</option>
+							<option value="Nice">Nice</option>
+							<option value="Paris">Paris</option>
+							<option value="Toulouse">Toulouse</option>
+						</select>
+						<br />
+						<label for="nom">Type</label>
+						<select name="type">
+							<option value="comique">Comique</option>
+							<option value="tragique">Tragique</option>
+							<option value="autre">Autre</option>
+						</select>
+						<br />
+						<label for="nom">Date</label> 
+						<input type="date" id="date" name="date">
+						<br />
+						<br />
+						<input type="submit" value="Rechercher" class="sansLabel" />
+						<br />
 
 					</fieldset>
 				</form>

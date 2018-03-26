@@ -3,25 +3,25 @@ package fr.eseo.jee;
 import java.io.IOException;
 import java.sql.SQLException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import javax.servlet.RequestDispatcher;
 
 /**
- * Servlet implementation class TrouverSpectacleServlet
+ * Servlet implementation class ReserverSpectacleServlet
  */
-@WebServlet("/TrouverSpectacleServlet")
-public class TrouverSpectacleServlet extends HttpServlet {
+@WebServlet("/ReserverSpectacleServlet")
+public class ReserverSpectacleServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public TrouverSpectacleServlet() {
+	public ReserverSpectacleServlet() {
 		super();
 	}
 
@@ -31,16 +31,14 @@ public class TrouverSpectacleServlet extends HttpServlet {
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
-		String ville = request.getParameter("ville");
-
+		
 		SpectacleBDD instanceBDD = new SpectacleBDD();
 		String spectacle ="";
 		instanceBDD.connexion();
 		instanceBDD.createStatement();
 
 		try {
-			instanceBDD.getStnt().executeQuery("SELECT titreSpectacle FROM Spectacles WHERE ville='"+ville+"';");
+			instanceBDD.getStnt().executeQuery("'"+"';");
 
 			while (instanceBDD.getRset().next()) {
 				System.out.println(instanceBDD.getRset().getString("titreSpectacle"));

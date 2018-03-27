@@ -33,7 +33,7 @@ public class ReserverSpectacleServlet extends HttpServlet {
 			throws ServletException, IOException {
 		
 		SpectacleBDD instanceBDD = new SpectacleBDD();
-		String spectacle ="";
+		String spectacle = "";
 		instanceBDD.connexion();
 		instanceBDD.createStatement();
 

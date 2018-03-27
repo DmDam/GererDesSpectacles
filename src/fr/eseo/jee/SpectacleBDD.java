@@ -11,7 +11,8 @@ public class SpectacleBDD {
 	private Connection db = null;
 	private Statement stnt = null;
 
-	protected String titreSpectacleSQL = "SELECT titreSpectacle FROM Spectacles";
+	public static String SPECTACLES_QL = "SELECT * FROM Spectacles";
+	public static String DELETE_RESERVATION_SQL = "DELETE FROM Reservation WHERE idReservation=";
 
 	public SpectacleBDD() {
 		

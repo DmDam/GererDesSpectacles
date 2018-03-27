@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Mer 21 Mars 2018 à 08:22
+-- Généré le :  Lun 26 Mars 2018 à 20:25
 -- Version du serveur :  5.7.21-0ubuntu0.16.04.1
 -- Version de PHP :  7.0.22-0ubuntu0.16.04.1
 
@@ -31,6 +31,7 @@ CREATE TABLE `Client` (
   `nom` varchar(25) NOT NULL,
   `prenom` varchar(25) NOT NULL,
   `email` varchar(50) NOT NULL,
+  `motDePasse` varchar(50) NOT NULL,
   `adresse` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -38,10 +39,10 @@ CREATE TABLE `Client` (
 -- Contenu de la table `Client`
 --
 
-INSERT INTO `Client` (`idClient`, `nom`, `prenom`, `email`, `adresse`) VALUES
-(1, 'Guyon', 'Wilfried', 'wilfried.guyon@reseau.eseo.fr', '116 Boulevard Jean Moulin'),
-(3, 'Guillou', 'Charles-Alexandre', 'charlesalexandre.guillou@reseau.eseo.fr', '6 rue Louis Blériot'),
-(4, 'Guibal', 'Xavier', 'xavier.guibal@reseau.eseo.fr', '20 allée des codeurs');
+INSERT INTO `Client` (`idClient`, `nom`, `prenom`, `email`, `motDePasse`, `adresse`) VALUES
+(1, 'Guyon', 'Wilfried', 'wilfried.guyon@reseau.eseo.fr', 'test', '116 Boulevard Jean Moulin'),
+(3, 'Guillou', 'Charles-Alexandre', 'charlesalexandre.guillou@reseau.eseo.fr', 'test', '6 rue Louis Blériot'),
+(4, 'Guibal', 'Xavier', 'xavier.guibal@reseau.eseo.fr', 'test', '20 allée des codeurs');
 
 -- --------------------------------------------------------
 
@@ -63,8 +64,9 @@ CREATE TABLE `Reservation` (
 
 INSERT INTO `Reservation` (`idReservation`, `idSpectacle`, `idClient`, `nombresPlaces`, `booleanPaiementEffectue`) VALUES
 (1, 1, 1, 1, 0),
-(2, 5, 1, 2, 0),
-(3, 6, 1, 245, 0);
+(2, 5, 1, 2, 1),
+(3, 6, 1, 245, 0),
+(10, 1, 3, 2, 0);
 
 -- --------------------------------------------------------
 
@@ -124,17 +126,17 @@ ALTER TABLE `Spectacles`
 -- AUTO_INCREMENT pour la table `Client`
 --
 ALTER TABLE `Client`
-  MODIFY `idClient` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `idClient` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT pour la table `Reservation`
 --
 ALTER TABLE `Reservation`
-  MODIFY `idReservation` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `idReservation` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT pour la table `Spectacles`
 --
 ALTER TABLE `Spectacles`
-  MODIFY `idSpectacle` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `idSpectacle` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- Contraintes pour les tables exportées
 --

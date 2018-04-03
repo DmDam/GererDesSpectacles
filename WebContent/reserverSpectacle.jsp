@@ -63,32 +63,33 @@
 			<div class="col-lg-12" align="center">
 				<fieldset>
 					<legend>Réserver un spectacle</legend>
+					<form action="/ReserverSpectacleServlet">
 
-					<br /> <label for="nom">Résultat de votre recherche :</label> <select
-						name="spectacle">
-						<option value="">bdd en attente</option>
-					</select> <br /> <br /> <label for="nom">Nom </label> <input type="text"
-						id="nom" name="nom" value="" size="40" maxlength="40" /> <br />
+						<br /> <label for="nom">Résultat de votre recherche :</label> <select
+							name="spectacle">
+							<option value="">bdd en attente</option>
+						</select> <br /> <br /> <label for="nom">Nom </label> <input type="text"
+							id="nom" name="nom" value="" size="40" maxlength="40" /> <br />
 
-					<br /> <label for="nom">Prenom </label> <input type="text"
-						id="prenom" name="prenom" value="" size="20" maxlength="20" /> <br />
+						<br /> <label for="nom">Prenom </label> <input type="text"
+							id="prenom" name="prenom" value="" size="20" maxlength="20" /> <br />
 
-					<br /> <label for="email">Adresse email </label> <input
-						type="text" id="email" name="email" value="" size="30"
-						maxlength="30" /> <br /> <br /> <input type="submit"
-						value="Réserver" class="sansLabel" /> <br />
-
+						<br /> <label for="email">Adresse email </label> <input
+							type="text" id="email" name="email" value="" size="30"
+							maxlength="30" /> <br /> <br /> <input type="submit"
+							value="Réserver" class="sansLabel" /> <br />
+					</form>
 				</fieldset>
 			</div>
 		</div>
 	</div>
 	<footer class="row">
-		<div class="col-lg-12" align="center"
-			style="position: absolute; bottom: 0;">
-			<hr width="90%">
-			<p style="font-size: 12px;">JavaEE Project : Réservation Spectacle
-				- NOUS</p>
-		</div>
+	<div class="col-lg-12" align="center"
+		style="position: absolute; bottom: 0;">
+		<hr width="90%">
+		<p style="font-size: 12px;">JavaEE Project : Réservation Spectacle
+			- NOUS</p>
+	</div>
 	</footer>
 </body>
 </html>

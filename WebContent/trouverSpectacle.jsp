@@ -61,9 +61,9 @@
 		<br>
 		<div class="row">
 			<div class="col-lg-12" align="center">
-				<form method="post" action="TrouverSpectacleServlet">
-					<fieldset>
-						<legend>Rechercher un spectacle</legend>
+				<fieldset>
+					<legend>Rechercher un spectacle</legend>
+					<form action="TrouverSpectacleServlet">
 						<br /> <label for="nom">Ville</label> <select name="ville">
 							<option value="Angers">Angers</option>
 							<option value="Bordeaux">Bordeaux</option>
@@ -81,18 +81,18 @@
 						</select> <br /> <label for="nom">Date</label> <input type="date"
 							id="date" name="date"> <br /> <br /> <input
 							type="submit" value="Rechercher" class="sansLabel" /> <br />
-					</fieldset>
-				</form>
+					</form>
+				</fieldset>
 			</div>
 		</div>
 	</div>
 	<footer class="row">
-		<div class="col-lg-12" align="center"
-			style="position: absolute; bottom: 0;">
-			<hr width="90%">
-			<p style="font-size: 12px;">JavaEE Project : Réservation Spectacle
-				- NOUS</p>
-		</div>
+	<div class="col-lg-12" align="center"
+		style="position: absolute; bottom: 0;">
+		<hr width="90%">
+		<p style="font-size: 12px;">JavaEE Project : Réservation Spectacle
+			- NOUS</p>
+	</div>
 	</footer>
 </body>
 </html>

@@ -38,7 +38,8 @@ public class ReserverSpectacleServlet extends HttpServlet {
 		instanceBDD.createStatement();
 
 		try {
-			instanceBDD.getStnt().executeQuery("'"+"';");
+			//instanceBDD.getStnt().executeQuery("'"+"';");
+			instanceBDD.getStnt().executeQuery("SELECT * FROM `spectacles`;");
 
 			while (instanceBDD.getRset().next()) {
 				System.out.println(instanceBDD.getRset().getString("titreSpectacle"));

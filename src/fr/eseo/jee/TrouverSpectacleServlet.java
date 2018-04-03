@@ -56,7 +56,7 @@ public class TrouverSpectacleServlet extends HttpServlet {
 		
 		HttpSession session = request.getSession();
 		session.setAttribute("spectacle", spectacle);
-		RequestDispatcher disp = request.getRequestDispatcher("reservation.jsp");
+		RequestDispatcher disp = request.getRequestDispatcher("outputTrouverSpectacle.jsp");
 		disp.forward(request, response);
 
 	}

@@ -1,6 +1,6 @@
-package eseo.test;
+package fr.eseo.jee;
 
-public class ReservationSpectacle {
+public class ReservationSpectacleJean {
 	
 	private int codeReservation;
 	private int codeSpectacle;

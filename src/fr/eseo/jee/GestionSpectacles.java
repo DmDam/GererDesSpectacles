@@ -52,7 +52,7 @@ public class GestionSpectacles {
 	
 	
 	
-	public int reserverSpectacel(ReservationSpectacle uneReservation) {
+	public int reserverSpectacle(ReservationSpectacleJean uneReservation) {
 		
 		SpectacleBDD instanceBDD = new SpectacleBDD();
 		instanceBDD.connexion();
@@ -60,7 +60,7 @@ public class GestionSpectacles {
 		int cr = 0;
 		
 		try {
-			instanceBDD.getStnt().executeQuery("INSERT INTO Reservation VALUES (" + uneReservation.getCodeReservation() + " , " + uneReservation.getCodeSpectacle() + " , " + uneReservation.getCodeClient() + " , " + uneReservation.getNbPersonnes() + " , " + uneReservation.getPaiement()+ " ); ");
+			instanceBDD.getStnt().executeQuery("INSERT INTO `reservation`(`idReservation`, `idSpectacle`, `idClient`, `nombresPlaces`, `booleanPaiementEffectue`) VALUES (" + uneReservation.getCodeReservation() + " , " + uneReservation.getCodeSpectacle() + " , " + uneReservation.getCodeClient() + " , " + uneReservation.getNbPersonnes() + " , " + uneReservation.getPaiement()+ " ); ");
 			ResultSet rset = instanceBDD.getStnt().getResultSet();
 			
 			while(instanceBDD.getRset().next()) {

@@ -54,7 +54,7 @@ public class ReserverSpectacleServlet extends HttpServlet {
 		
 		HttpSession session = request.getSession();
 		session.setAttribute("spectacle", spectacle);
-		RequestDispatcher disp = request.getRequestDispatcher("reservation.jsp");
+		RequestDispatcher disp = request.getRequestDispatcher("outputReserverSpectacle.jsp");
 		disp.forward(request, response);
 
 	}

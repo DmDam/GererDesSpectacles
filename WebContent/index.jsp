@@ -51,7 +51,7 @@
 				<legend>Bienvenue <%= session.getAttribute("nomClient")+" "+session.getAttribute("prenomClient") %> </legend>
 			<% } else { %>
 				<legend>Bienvenue</legend>
-				<p>Copyright © All rights reserved</p>
+				<p>Copyright © No rights reserved</p>
 			<% } %>
 		</fieldset>
 </div>

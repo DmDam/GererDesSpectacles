@@ -25,10 +25,10 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav mr-auto">
 				      <li class="nav-item active"><a class="nav-link" href="index.jsp">Accueil <span class="sr-only">(current)</span></a></li>
-				      <li class="nav-item"><a class="nav-link" href="#">TrouverSpectacle</a></li>
-				      <li class="nav-item"><a class="nav-link" href="#">ReserverSpectacle</a></li>
-				      <li class="nav-item"><a class="nav-link" href="PayerSpectacle">PayerSpectacle</a></li>
-				      <li class="nav-item"><a class="nav-link" href="AnnulerSpectacle">AnnulerSpectacle</a></li>
+				      <li class="nav-item"><a class="nav-link" href="trouverSpectacle.jsp">TrouverSpectacle</a></li>
+				      <li class="nav-item"><a class="nav-link" href="reserverSpectacle.jsp">ReserverSpectacle</a></li>
+				      <li class="nav-item"><a class="nav-link" href="payerSpectacle.jsp">PayerSpectacle</a></li>
+				      <li class="nav-item"><a class="nav-link" href="annulerSpectacle.jsp">AnnulerSpectacle</a></li>
 				    </ul>
 				    <ul class="navbar-nav navbar-right">
 				      <% if(connexionClient.equals("true")) {%>

@@ -63,7 +63,8 @@
 		<div class="row">
 			<div class="col-lg-12" align="center">
 				Résultat :
-				<% request.getParameter("listeSpectacle"); %>
+				<%String monVar = (String)(request.getAttribute("titreSpectReq"));
+				out.println( monVar );%>
 				.
 			</div>
 		</div>

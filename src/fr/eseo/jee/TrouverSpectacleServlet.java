@@ -1,8 +1,6 @@
 package fr.eseo.jee;
 
 import java.io.IOException;
-import java.sql.SQLException;
-import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -41,7 +39,8 @@ public class TrouverSpectacleServlet extends HttpServlet {
 		Spectacle[] listeSpectacle = var.trouverSpectacle(spectacle);
 		
 		HttpSession session = request.getSession();
-		session.setAttribute("listeSpectacle", listeSpectacle);
+		request.setAttribute("titreSpectReq", listeSpectacle[0].getTitreSpectacle());
+		System.out.println(listeSpectacle[0].getTitreSpectacle());
 		RequestDispatcher disp = request.getRequestDispatcher("outputTrouverSpectacle.jsp");
 		disp.forward(request, response);
 

@@ -17,8 +17,8 @@
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<ul class="navbar-nav mr-auto">
 							<li class="nav-item"><a class="nav-link" href="index.jsp">Accueil</a></li>
-							<li class="nav-item"><a class="nav-link" href="#">TrouverSpectacle</a></li>
-							<li class="nav-item"><a class="nav-link" href="#">ReserverSpectacle</a></li>
+							<li class="nav-item"><a class="nav-link" href="trouverSpectacle.jsp">TrouverSpectacle</a></li>
+							<li class="nav-item"><a class="nav-link" href="reserverSpectacle.jsp">ReserverSpectacle</a></li>
 							<li class="nav-item"><a class="nav-link"
 								href="PayerSpectacle">PayerSpectacle</a></li>
 							<li class="nav-item active"><a class="nav-link"
@@ -99,7 +99,7 @@
 		style="position: absolute; bottom: 0;">
 		<hr width="90%">
 		<p style="font-size: 12px;">JavaEE Project : Réservation Spectacle
-			- NOUS</p>
+			- Charles-Alexandre Guillou, Wilfried Guyon, Damien Maymard, Jean Zwolinski</p>
 	</div>
 	</footer>
 </body>

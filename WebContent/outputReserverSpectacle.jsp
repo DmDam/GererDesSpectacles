@@ -32,9 +32,9 @@
 							<li class="nav-item"><a class="nav-link"
 								href="reserverSpectacle.jsp">ReserverSpectacle</a></li>
 							<li class="nav-item"><a class="nav-link"
-								href="payerSpectacle.jsp">PayerSpectacle</a></li>
+								href="PayerSpectacle">PayerSpectacle</a></li>
 							<li class="nav-item"><a class="nav-link"
-								href="annulerSpectacle.jsp">AnnulerSpectacle</a></li>
+								href="AnnulerSpectacle">AnnulerSpectacle</a></li>
 						</ul>
 						<ul class="navbar-nav navbar-right">
 							<%
@@ -70,7 +70,7 @@
 		style="position: absolute; bottom: 0;">
 		<hr width="90%">
 		<p style="font-size: 12px;">JavaEE Project : Réservation Spectacle
-			- NOUS</p>
+			- Charles-Alexandre Guillou, Wilfried Guyon, Damien Maymard, Jean Zwolinski</p>
 	</div>
 	</footer>
 </body>

@@ -85,7 +85,7 @@ public class PayerSpectacleServlet extends HttpServlet {
 			
 			session.setAttribute("i", i);
 			session.setAttribute("spectacle",spectacle);
-			RequestDispatcher disp = request.getRequestDispatcher("PayerSpectacle.jsp");
+			RequestDispatcher disp = request.getRequestDispatcher("payerSpectacle.jsp");
 			disp.forward(request, response);			
 			
 		} else {

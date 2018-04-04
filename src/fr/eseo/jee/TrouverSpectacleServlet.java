@@ -2,6 +2,7 @@ package fr.eseo.jee;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -32,30 +33,15 @@ public class TrouverSpectacleServlet extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		String ville = request.getParameter("ville");
-
-		SpectacleBDD instanceBDD = new SpectacleBDD();
-		String spectacle ="";
-		instanceBDD.connexion();
-		instanceBDD.createStatement();
-
-		try {
-			instanceBDD.getStnt().executeQuery("SELECT titreSpectacle FROM Spectacles WHERE ville='"+ville+"';");
-
-			while (instanceBDD.getRset().next()) {
-				System.out.println(instanceBDD.getRset().getString("titreSpectacle"));
-				System.out.println("----------");
-				spectacle = instanceBDD.getRset().getString("titreSpectacle");
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-
-		instanceBDD.fermetureStatement();
-		instanceBDD.fermetureConnexion();
+		Spectacle spectacle = new Spectacle();
+		spectacle.setVilleSpectable(request.getParameter("ville"));
+		spectacle.setTypeSpectable(request.getParameter("type"));
+		
+		GestionSpectacles var = new GestionSpectacles();
+		Spectacle[] listeSpectacle = var.trouverSpectacle(spectacle);
 		
 		HttpSession session = request.getSession();
-		session.setAttribute("spectacle", spectacle);
+		session.setAttribute("listeSpectacle", listeSpectacle);
 		RequestDispatcher disp = request.getRequestDispatcher("outputTrouverSpectacle.jsp");
 		disp.forward(request, response);
 

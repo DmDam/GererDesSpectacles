@@ -23,7 +23,7 @@ public class GestionSpectacles {
 		int i = 0;
 		
 		try {
-			instanceBDD.getStnt().executeQuery("SELECT * FROM Spectacles WHERE idSpectacle = " + unSpectacle.getCodeSpectacle() + " AND typeSpectale = " + unSpectacle.getTypeSpectacle() + " AND titreSpectacle = " + unSpectacle.getTitreSpectacle() + " AND ville = " + unSpectacle.getVilleSpectacle() + " AND dateSpectacle = " + unSpectacle.getDateSpectacle() + " AND prixSpectacle = " + unSpectacle.getPrixSpectacle() + ";");
+			instanceBDD.getStnt().executeQuery("SELECT * FROM Spectacles WHERE `typeSpectale` = '" + unSpectacle.getTypeSpectacle() + "' AND `ville` = '" + unSpectacle.getVilleSpectacle() + "';");
 			ResultSet rset = instanceBDD.getStnt().getResultSet();
 			
 			while(instanceBDD.getRset().next()) {

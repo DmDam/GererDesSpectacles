@@ -75,9 +75,10 @@
 							<option value="Paris">Paris</option>
 							<option value="Toulouse">Toulouse</option>
 						</select> <br /> <label for="nom">Type</label> <select name="type">
-							<option value="comique">Comique</option>
-							<option value="tragique">Tragique</option>
-							<option value="autre">Autre</option>
+							<option value="Comique">Comique</option>
+							<option value="Tragique">Tragique</option>
+							<option value="Histoire">Histoire</option>
+							<option value="SYFY">SYFY</option>
 						</select> <br /> <label for="nom">Date</label> <input type="date"
 							id="date" name="date"> <br /> <br /> <input
 							type="submit" value="Rechercher" class="sansLabel" /> <br />

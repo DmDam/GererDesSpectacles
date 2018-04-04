@@ -58,9 +58,9 @@ public class SpectacleBDD {
 		try {
 			DriverManager.registerDriver(new com.mysql.jdbc.Driver());
 			this.db = DriverManager.getConnection("jdbc:mysql://localhost/Spectacle?user=admin&password=network");
-			System.out.println("Connection ok " + this.db);
+			System.out.println("Connexion réussie à " + this.db + ".");
 		} catch (SQLException event) {
-			System.out.println("Code erreur : " + event.getErrorCode());
+			System.out.println("Echec de connexion. Code erreur : " + event.getErrorCode());
 			event.printStackTrace();
 		} catch (Exception event) {
 			event.printStackTrace();
@@ -70,7 +70,7 @@ public class SpectacleBDD {
 	public void createStatement() {
 		try {
 			this.stnt = getDb().createStatement();
-			System.out.println("Statement created ...");
+			System.out.println("Création du statement.");
 		} catch (SQLException event) {
 			event.printStackTrace();
 		}
@@ -79,7 +79,7 @@ public class SpectacleBDD {
 	public void fermetureStatement() {
 		try {
 			getStnt().close();
-			System.out.println("Fermeture statement ...");
+			System.out.println("Fermeture du statement.");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -88,7 +88,7 @@ public class SpectacleBDD {
 	public void fermetureConnexion() {
 		try {
 			getDb().close();
-			System.out.println("Connexion close");
+			System.out.println("Fermeture de la connexion.");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
